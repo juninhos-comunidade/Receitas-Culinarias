@@ -1,1 +1,1 @@
-# Receitas-Culin-rias
+# Receitas-Culinarias
