@@ -1,17 +1,17 @@
-<h1 align="center">Receitas Culinarias</h1>
+<h1 align="center">🚀 Plataforma de Receitas Culinárias</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Comunidade-Juninhos-7B2CBF?style=for-the-badge&logo=discord&logoColor=white" alt="Juninhos Community" />
-  <img src="https://img.shields.io/badge/Status-[Inserir%20Status]-orange?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge" alt="Status" />
 </p>
 
 ---
 
 ## 📝 Sobre o Projeto
 
-Plataforma digital para organização e compartilhamento de receitas caseiras, facilitando o acesso e a visualização de etapas de preparo.
+O projeto consiste em uma **Plataforma digital para organização e compartilhamento de receitas caseiras**, desenvolvida com o objetivo de facilitar o acesso e a visualização detalhada de cada etapa de preparo. A aplicação busca conectar entusiastas da culinária, permitindo que compartilhem suas experiências e organizem seus pratos favoritos em um ambiente dinâmico e intuitivo.
 
-Este projeto está sendo desenvolvido de forma 100% colaborativa dentro do ecossistema da **Comunidade Juninhos**. Nosso objetivo primordial é aplicar conceitos modernos de engenharia de software para entregar uma solução robusta, escalável e com impacto real.
+Este projeto está sendo construído de forma 100% colaborativa dentro do ecossistema da **Comunidade Juninhos**. Nosso foco primordial é aplicar conceitos modernos de engenharia de software para entregar uma solução robusta, de alta performance e com excelente usabilidade.
 
 > 💡 **Nota do Squad:** Este README serve como um documento vivo. Ele será atualizado continuamente conforme novas funcionalidades forem integradas nas sprints de 30 dias.
 
@@ -30,12 +30,13 @@ O projeto foi estruturado seguindo os conceitos de **modularização**, alta coe
 
 ## 📌 Funcionalidades Principais
 
-Aqui está o mapeamento de recursos que estão sendo construídos ou planejados para o projeto:
+Aqui está o mapeamento de recursos que estão sendo construídos ou planejados para a plataforma de receitas:
 
-- [ ] 🔐 **Funcionalidade 1:** [Breve descrição do recurso ou módulo]
-- [ ] 👥 **Funcionalidade 2:** [Breve descrição do recurso ou módulo]
-- [ ] ⚙️ **Funcionalidade 3:** [Breve descrição do recurso ou módulo]
-- [ ] 📊 **Funcionalidade 4:** [Breve descrição do recurso ou módulo]
+- [ ] 🔐 **Sistema de Autenticação:** Login e Cadastro unificados via abas dinâmicas (Tabs sem recarregamento).
+- [ ] 🍳 **Compartilhamento de Receitas:** Criação de publicações contendo ingredientes, rendimento, tempo de preparo e categorização técnica.
+- [ ] 📖 **Visualização Passo a Passo:** Interface fluida e limpa para acompanhar as etapas de preparo de forma sequencial sem distrações.
+- [ ] 🔍 **Filtros e Busca Avançada:** Localização de receitas por categorias, ingredientes ou tempo de execução.
+- [ ] 🏅 **Ecossistema de Badges:** Gamificação integrada para os membros ativos que mais contribuem com a comunidade culinária.
 
 ---
 
@@ -52,12 +53,12 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 
 1. Clone o repositório oficial dentro da organização Juninhos:
    ```bash
-   git clone [URL-DO-REPOSITORIO-AQUI]
+   git clone [https://github.com/juninhos-comunidade/plataforma-receitas.git](https://github.com/juninhos-comunidade/plataforma-receitas.git)
    ```
 
 2. Acesse a pasta do projeto:
    ```bash
-   cd [NOME-DA-PASTA-DO-PROJETO]
+   cd plataforma-receitas
    ```
 
 3. Instale todas as dependências necessárias:
@@ -91,9 +92,9 @@ git checkout -b feature/minha-tarefa
 
 ### 2. Padrão de Commits
 Os commits devem ser claros, em português e indicar a intenção da alteração:
-* `feat: [breve descrição do novo recurso adicionado]`
-* `fix: [breve descrição do bug corrigido]`
-* `style: [breve descrição da alteração estética ou de formatação]`
+* `feat: adiciona componente de listagem de ingredientes`
+* `fix: corrige quebra de layout na visualizacao de etapas`
+* `style: atualiza espaçamentos e cores dos cards de receitas`
 
 ### 3. Revisão de Código (Pull Requests)
 * Nunca faça o merge direto na branch principal.
@@ -103,14 +104,15 @@ Os commits devem ser claros, em português e indicar a intenção da alteração
 
 ## 👥 Nosso Squad
 
-Um projeto completo só ganha vida com uma equipe sintonizada. Conheça as mentes por trás do desenvolvimento:
+Um projeto completo só ganha vida com uma equipe sintonizada. Conheça as mentes por trás do desenvolvimento da plataforma:
 
 | Avatar | Membro | Função / Especialidade | GitHub |
 | :---: | :--- | :--- | :--- |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | [Nome do Integrante 1] | Pendente | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | [Nome do Integrante 2] | Pendente | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | [Nome do Integrante 3] | Pendente | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | [Nome do Integrante 4] | Pendente | ... |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Alysson (yashi)** | Pendente | ... |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Ana Clara** | Pendente | ... |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Hivila** | Pendente | ... |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Pedro Lukas** | Pendente | ... |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **ALANA PATRICIO LIRA** | Pendente | ... |
 
 ---
 
@@ -124,5 +126,4 @@ Este projeto é de uso exclusivo e educacional dos membros vinculados à **Junin
 
 Este projeto é desenvolvido e mantido pelos membros da **Juninhos Community**.
 Se precisar de suporte técnico, mentoria de deploy ou dúvidas sobre infraestrutura, use os canais oficiais no Discord.
-
-**Bora transformar ideias em código! [++]**
+```
