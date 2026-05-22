@@ -112,7 +112,7 @@ Um projeto completo só ganha vida com uma equipe sintonizada. Conheça as mente
 | <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Ana Clara** | Pendente | ... |
 | <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Hivila** | Pendente | ... |
 | <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Pedro Lukas** | Back-end Java | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **ALANA PATRICIO LIRA** | Pendente | ... |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Gabriel Lima** | Back-end Java | ... |
 
 ---
 
