@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '21'
           distribution: 'temurin'
@@ -42,27 +42,35 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        if: hashFiles('frontend/package.json') != ''
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
           cache-dependency-path: './frontend/package-lock.json'
 
       - name: Install dependencies
+        if: hashFiles('frontend/package.json') != ''
         run: npm ci
 
-      # Lembrete: Descomentar as linhas abaixo depois de configurar os testes
-      # - name: Run Linting
-      #   run: npm run lint
+      - name: Run Linting
+        if: hashFiles('frontend/package.json') != ''
+        run: npm run lint
 
-      # - name: Run Tests
-      #   run: npm test
+      - name: Run Tests
+        if: hashFiles('frontend/package.json') != ''
+        run: npm test
 
       - name: Build Next.js project
+        if: hashFiles('frontend/package.json') != ''
         run: npm run build
+
+      - name: Skip message
+        if: hashFiles('frontend/package.json') == ''
+        run: echo "Nenhum arquivo do frontend encontrado. Skippando com sucesso!"
 
   # ---------------------------------------------------
   # ROBÔ 3: Responsável pelo Docker (Empacotamento)
@@ -74,7 +82,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Test Docker image build
+        if: hashFiles('Dockerfile') != ''
         run: docker build -t receitas-api:test .
+
+      - name: Skip message
+        if: hashFiles('Dockerfile') == ''
+        run: echo "Nenhum Dockerfile encontrado. Skippando com sucesso!"
