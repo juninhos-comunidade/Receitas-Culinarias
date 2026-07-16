@@ -1,0 +1,14 @@
+# IDEs e Editores
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Logs globais
+*.log
