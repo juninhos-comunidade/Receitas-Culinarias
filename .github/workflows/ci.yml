@@ -7,7 +7,7 @@ on:
 
 jobs:
   # ---------------------------------------------------
-  # ROBÔ 1: Responsável pelo Back-end (Java/Spring)
+  # Responsável pelo Back-end (Java/Spring)
   # ---------------------------------------------------
   backend-build:
     runs-on: ubuntu-latest
@@ -26,19 +26,16 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: 'maven'
+          cache-dependency-path: backend/pom.xml
 
       - name: Build and Test with Maven
         run: mvn -B clean verify
 
   # ---------------------------------------------------
-  # ROBÔ 2: Responsável pelo Front-end (React/Next.js)
+  # Responsável pelo Front-end (React/Next.js)
   # ---------------------------------------------------
   frontend-build:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: ./frontend
 
     steps:
       - name: Checkout repository
@@ -50,30 +47,34 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-          cache-dependency-path: './frontend/package-lock.json'
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
         if: hashFiles('frontend/package.json') != ''
+        working-directory: ./frontend
         run: npm ci
 
       - name: Run Linting
         if: hashFiles('frontend/package.json') != ''
+        working-directory: ./frontend
         run: npm run lint
 
       - name: Run Tests
         if: hashFiles('frontend/package.json') != ''
+        working-directory: ./frontend
         run: npm test
 
       - name: Build Next.js project
         if: hashFiles('frontend/package.json') != ''
+        working-directory: ./frontend
         run: npm run build
-
+        
       - name: Skip message
         if: hashFiles('frontend/package.json') == ''
         run: echo "Nenhum arquivo do frontend encontrado. Skippando com sucesso!"
 
   # ---------------------------------------------------
-  # ROBÔ 3: Responsável pelo Docker (Empacotamento)
+  # Responsável pelo Docker (Empacotamento)
   # ---------------------------------------------------
   docker-build:
     runs-on: ubuntu-latest
@@ -87,7 +88,7 @@ jobs:
       - name: Test Docker image build
         if: hashFiles('Dockerfile') != ''
         run: docker build -t receitas-api:test .
-
+        
       - name: Skip message
         if: hashFiles('Dockerfile') == ''
         run: echo "Nenhum Dockerfile encontrado. Skippando com sucesso!"
